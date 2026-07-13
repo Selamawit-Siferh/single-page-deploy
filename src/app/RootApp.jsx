@@ -144,6 +144,24 @@ const aboutUsData = [
   }
 ];
 
+const proofs = [
+  {
+    title: "Mobile-First",
+    description: "It looks perfect on every screen.",
+    icon: "mobile"
+  },
+  {
+    title: "Secure",
+    description: "SSL, encryption, and data protection as standard.",
+    icon: "lock"
+  },
+  {
+    title: "AI-Integrated",
+    description: "Options for chatbots or automated workflows.",
+    icon: "ai"
+  }
+];
+
 function Icon({ type }) {
   const common = {
     viewBox: "0 0 24 24",
@@ -193,6 +211,24 @@ function Icon({ type }) {
       <svg {...common}>
         <rect x="5" y="11" width="14" height="10" rx="2" />
         <path d="M8 11V8a4 4 0 1 1 8 0v3" />
+      </svg>
+    );
+  }
+  if (type === "mobile") {
+    return (
+      <svg {...common}>
+        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+        <line x1="12" y1="18" x2="12" y2="18" />
+      </svg>
+    );
+  }
+  if (type === "ai") {
+    return (
+      <svg {...common}>
+        <path d="M12 2a2 2 0 0 1 2 2v2h-4V4a2 2 0 0 1 2-2Z" />
+        <path d="M20 8v8a2 2 0 0 1-2 2h-4l-4 4-4-4H6a2 2 0 0 1-2-2V8h16Z" />
+        <path d="M8 12h8" />
+        <path d="M12 8v8" />
       </svg>
     );
   }
@@ -362,7 +398,7 @@ export default function App() {
               </p>
               <div className="hero-actions">
                 <a className="primary-button" href="#contact">Launch Your Project</a>
-                <a className="secondary-button" href="#portfolio">View Our Work</a>
+                <a className="secondary-button" href="#proofs">View Our Work</a>
               </div>
 
             </div>
@@ -471,6 +507,19 @@ export default function App() {
                             ? "feature-card-accent"
                             : ""
                   }
+                />
+              ))}
+            </div>
+          </section>
+
+          <section className="section-block proof-section" id="proofs">
+            <p className="section-title">What We Do Proof: Our products and how we build</p>
+            <div className="card-grid proof-grid">
+              {proofs.map((proof, i) => (
+                <Card
+                  key={proof.title}
+                  {...proof}
+                  className={`mini-card ${i === 0 ? "feature-card-leftglow" : i === 2 ? "feature-card-accent" : ""}`}
                 />
               ))}
             </div>
