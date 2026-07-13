@@ -78,6 +78,4 @@ single-page-deploy/
 └── vite.config.js
 ```
 
-## License
 
-MIT
