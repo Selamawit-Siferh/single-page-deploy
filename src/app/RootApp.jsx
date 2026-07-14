@@ -552,7 +552,7 @@ export default function App() {
                 </button>
 
                 <a 
-                  href="https://calendly.com/" 
+                  href="https://calendly.com/siferhselamawit/discovery-call" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="calendly-link"
