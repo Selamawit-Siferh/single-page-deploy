@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import brainHero from "../assets/brain-hero.png";
+import brainNetwork from "../assets/nav_image.jpg";
+import heroImg from "../assets/nav_image.jpg";
 
 const bannerTexts = [
   "FUTURE-PROOF YOUR BUSINESS WITH ELITE WEB SOLUTIONS",
   "TRANSFORM YOUR LOCAL BUSINESS INTO A DIGITAL LEGEND",
-  "CUTTING-EDGE WEB APPS THAT GROW WITH YOUR BRAND"
+  "CUTTING-EDGE WEB APPS THAT GROW WITH YOUR BRAND",
 ];
 
 const services = [
@@ -31,7 +33,7 @@ const services = [
 const howItWorks = [
   {
     title: "Discovery",
-    description: "We Jump on a call to understand your goals and roadblocks",
+    description: "We jump on a call to understand your goals and roadblocks",
     icon: "phone",
   },
   {
@@ -50,29 +52,32 @@ const portfolioProjects = [
   {
     title: "E-Commerce Platform",
     company: "TechShop Inc.",
-    description: "A full-featured online shopping platform with secure payment integration, inventory management, and user-friendly interface that increased sales by 35%.",
+    description:
+      "A full-featured online shopping platform with secure payment integration, inventory management, and user-friendly interface that increased sales by 35%.",
     githubLink: "https://github.com",
     image: heroImg,
     category: "E-commerce",
-    technologies: ["React", "Node.js", "MySQL", "Bootstrap"]
+    technologies: ["React", "Node.js", "MySQL", "Bootstrap"],
   },
   {
     title: "Task Management App",
     company: "Productivity Pro",
-    description: "Collaborative task manager with real-time updates, team assignments, and deadline tracking that improved team efficiency by 40%.",
+    description:
+      "Collaborative task manager with real-time updates, team assignments, and deadline tracking that improved team efficiency by 40%.",
     githubLink: "https://github.com",
     image: brainHero,
     category: "Web Development",
-    technologies: ["JavaScript", "React", "PostgreSQL", "Tailwind CSS"]
+    technologies: ["JavaScript", "React", "PostgreSQL", "Tailwind CSS"],
   },
   {
     title: "AI-Powered Chatbot",
     company: "AI Innovations",
-    description: "Intelligent chatbot for customer support that reduced response time by 70% using natural language processing.",
+    description:
+      "Intelligent chatbot for customer support that reduced response time by 70% using natural language processing.",
     githubLink: "https://github.com",
     image: brainHero,
     category: "AI Solutions",
-    technologies: ["Python", "Django", "JavaScript"]
+    technologies: ["Python", "Django", "JavaScript"],
   },
 ];
 
@@ -81,85 +86,94 @@ const testimonials = [
     customerName: "John Smith",
     profileImage: heroImg,
     jobTitle: "CEO, TechShop Inc.",
-    review: "Working with Apex Digital Systems was fantastic! They delivered our e-commerce platform ahead of schedule and the results speak for themselves. Our sales increased by 35% in the first quarter!",
+    review:
+      "Working with Apex Digital Systems was fantastic! They delivered our e-commerce platform ahead of schedule and the results speak for themselves. Our sales increased by 35% in the first quarter!",
     rating: 5,
     projectUsed: "E-commerce Platform Development",
-    date: "June 2024"
+    date: "June 2024",
   },
   {
     customerName: "Sarah Johnson",
     profileImage: brainHero,
     jobTitle: "Product Manager, Productivity Pro",
-    review: "The task management app they built completely transformed how our team collaborates. Real-time updates and intuitive design make our work so much easier!",
+    review:
+      "The task management app they built completely transformed how our team collaborates. Real-time updates and intuitive design make our work so much easier!",
     rating: 5,
     projectUsed: "Task Management App",
-    date: "May 2024"
+    date: "May 2024",
   },
   {
     customerName: "Michael Chen",
     profileImage: brainHero,
     jobTitle: "Founder, AI Innovations",
-    review: "Their AI expertise is top-notch! The chatbot they developed handles 70% of our customer inquiries automatically, saving us countless hours.",
+    review:
+      "Their AI expertise is top-notch! The chatbot they developed handles 70% of our customer inquiries automatically, saving us countless hours.",
     rating: 5,
     projectUsed: "AI Chatbot Development",
-    date: "April 2024"
-  }
+    date: "April 2024",
+  },
 ];
 
 const aboutUsData = [
   {
     title: "Company Introduction",
-    description: "Apex Digital Systems is a leading web development agency that builds high-performance websites and custom applications to turn small businesses into local legends. We provide complete digital solutions from design to deployment.",
-    icon: "brain"
+    description:
+      "Apex Digital Systems is a leading web development agency that builds high-performance websites and custom applications to turn small businesses into local legends. We provide complete digital solutions from design to deployment.",
+    icon: "brain",
   },
   {
     title: "Company Story",
-    description: "Founded in 2019, Apex Digital Systems started with a mission to help small businesses compete in the digital world. Over the years, we've grown from a small team to a full-service agency serving clients worldwide.",
-    icon: "phone"
+    description:
+      "Founded in 2019, Apex Digital Systems started with a mission to help small businesses compete in the digital world. Over the years, we've grown from a small team to a full-service agency serving clients worldwide.",
+    icon: "phone",
   },
   {
     title: "Mission ",
-    description: "To provide high-quality digital solutions for growing businesses.",
-    icon: "bolt"
+    description:
+      "To provide high-quality digital solutions for growing businesses.",
+    icon: "bolt",
   },
   {
     title: "Vision",
     description: "To become a leading technology partner worldwide.",
-    icon: "chart"
+    icon: "chart",
   },
   {
     title: "Core Values",
-    description: "Innovation, Quality, Integrity, Customer Satisfaction, Teamwork",
-    icon: "gear"
+    description:
+      "Innovation, Quality, Integrity, Customer Satisfaction, Teamwork",
+    icon: "gear",
   },
   {
     title: "Company Achievements",
-    description: "5+ years of experience, 150+ projects completed, 100+ happy clients, multiple industry awards.",
-    icon: "chart"
+    description:
+      "5+ years of experience, 150+ projects completed, 100+ happy clients, multiple industry awards.",
+    icon: "chart",
   },
   {
     title: "Why Choose Us",
-    description: "Experienced team, affordable solutions, fast delivery, and 24/7 quality support.",
-    icon: "phone"
-  }
+    description:
+      "Experienced team, affordable solutions, fast delivery, and 24/7 quality support.",
+    icon: "phone",
+  },
 ];
 
 const proofs = [
   {
     title: "Mobile-First",
     description: "It looks perfect on every screen.",
-    icon: "mobile"
+    icon: "mobile",
   },
   {
     title: "Secure",
     description: "SSL, encryption, and data protection as standard.",
-    icon: "lock"
+    icon: "lock",
   },
   {
     title: "AI-Integrated",
     description: "Options for chatbots or automated workflows.",
-    icon: "ai"
-  }
+    icon: "ai",
+  },
 ];
 
 function Icon({ type }) {
@@ -240,14 +254,10 @@ function Icon({ type }) {
   );
 }
 
-import heroImg from "../assets/nav_image.jpg";
-
-
 function HeroGraphic() {
   return (
     <img
-
-      src={heroImg}
+      src={brainNetwork}
       alt=""
       className="hero-graphic"
       aria-hidden="true"
@@ -256,16 +266,16 @@ function HeroGraphic() {
   );
 }
 
-function Card({ 
-  title, 
-  description, 
-  icon, 
-  className = "", 
-  image, 
-  company, 
-  link, 
-  category, 
-  technologies, 
+function Card({
+  title,
+  description,
+  icon,
+  className = "",
+  image,
+  company,
+  link,
+  category,
+  technologies,
   horizontal = false,
   customerName,
   profileImage,
@@ -274,34 +284,50 @@ function Card({
   rating,
   projectUsed,
   date,
-  isTestimonial = false
+  isTestimonial = false,
 }) {
   const CardContent = () => {
     if (isTestimonial) {
       return (
         <>
-          {profileImage && <img src={profileImage} alt={customerName} className="card-image-horizontal testimonial-avatar" />}
+          {profileImage && (
+            <img
+              src={profileImage}
+              alt={customerName}
+              className="card-image-horizontal testimonial-avatar"
+            />
+          )}
           <div className="card-text-content">
             {rating && (
               <div className="testimonial-rating">
                 {Array.from({ length: rating }).map((_, i) => (
-                  <span key={i} className="star">⭐</span>
+                  <span key={i} className="star">
+                    ⭐
+                  </span>
                 ))}
               </div>
             )}
             <p className="testimonial-review">{review}</p>
             <h4 className="testimonial-name">{customerName}</h4>
             {jobTitle && <p className="testimonial-job">{jobTitle}</p>}
-            {projectUsed && <p className="testimonial-project">{projectUsed}</p>}
+            {projectUsed && (
+              <p className="testimonial-project">{projectUsed}</p>
+            )}
             {date && <p className="testimonial-date">{date}</p>}
           </div>
         </>
       );
     }
-    
+
     return (
       <>
-        {image && <img src={image} alt={title} className={`card-image ${horizontal ? "card-image-horizontal" : ""}`} />}
+        {image && (
+          <img
+            src={image}
+            alt={title}
+            className={`card-image ${horizontal ? "card-image-horizontal" : ""}`}
+          />
+        )}
         {icon && (
           <div className="icon-wrap">
             <Icon type={icon} />
@@ -315,7 +341,9 @@ function Card({
           {technologies && technologies.length > 0 && (
             <div className="technologies-tags">
               {technologies.map((tech, i) => (
-                <span key={i} className="tech-tag">{tech}</span>
+                <span key={i} className="tech-tag">
+                  {tech}
+                </span>
               ))}
             </div>
           )}
@@ -324,14 +352,15 @@ function Card({
     );
   };
 
-  const cardClass = `feature-card ${className} ${horizontal ? "horizontal-card" : ""}`.trim();
+  const cardClass =
+    `feature-card ${className} ${horizontal ? "horizontal-card" : ""}`.trim();
 
   if (link) {
     return (
-      <a 
-        href={link} 
-        target="_blank" 
-        rel="noopener noreferrer" 
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
         className={cardClass}
       >
         <CardContent />
@@ -348,59 +377,124 @@ function Card({
 
 export default function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    projectType: "",
+    description: "",
+  });
+  const [formErrors, setFormErrors] = useState({});
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % bannerTexts.length);
-    }, 3000); // Change slide every 3 seconds
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
+  const sanitizeInput = (input) => {
+    const div = document.createElement("div");
+    div.textContent = input;
+    return div.innerHTML;
+  };
+
+  const validateForm = () => {
+    const errors = {};
+    if (!formData.name.trim()) {
+      errors.name = "Name is required";
+    }
+    if (!formData.email.trim()) {
+      errors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.email = "Please enter a valid email address";
+    }
+    if (!formData.projectType) {
+      errors.projectType = "Please select a project type";
+    }
+    if (!formData.description.trim()) {
+      errors.description = "Please provide a project description";
+    }
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  const handleInputChange = (e) => {
+    const { id, value, type } = e.target;
+    const fieldName = id.replace("-", "");
+    setFormData((prev) => ({
+      ...prev,
+      [fieldName]: type === "select-one" ? value : sanitizeInput(value),
+    }));
+    if (formErrors[fieldName]) {
+      setFormErrors((prev) => ({
+        ...prev,
+        [fieldName]: undefined,
+      }));
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      setFormSubmitted(true);
+      setTimeout(() => {
+        setFormData({ name: "", email: "", projectType: "", description: "" });
+        setFormSubmitted(false);
+      }, 3000);
+    }
+  };
+
   return (
     <div className="page-shell">
-      <div className="page-frame">
-        <header className="site-header">
-          <div className="brand">
-            <div className="brand-mark">
-              <span />
-              <span />
-            </div>
-            <div className="brand-copy">APEX DIGITAL SYSTEMS</div>
+      <header className="site-header">
+        <div className="brand">
+          <div className="brand-mark">
+            <span />
+            <span />
           </div>
+          <div className="brand-copy">APEX DIGITAL SYSTEMS</div>
+        </div>
 
-          <nav className="site-nav" aria-label="Primary">
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#testimonials">Testimonials</a>
-            <a href="#contact">Contact</a>
-          </nav>
+        <nav className="site-nav" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-          <a className="quote-button" href="#contact">Get a Free Quote</a>
-        </header>
+        <a className="quote-button" href="#contact">
+          Get a Free Quote
+        </a>
+      </header>
 
+      <div className="page-frame">
         <main className="content">
           <section className="hero-section" id="hero">
             <div className="hero-copy">
               <div className="banner-carousel">
                 {bannerTexts.map((text, index) => (
-                  <h1 
-                    key={index} 
-                    className={`banner-slide ${index === currentSlide ? 'active' : ''}`}
+                  <h1
+                    key={index}
+                    className={`banner-slide ${index === currentSlide ? "active" : ""}`}
                   >
                     {text}
                   </h1>
                 ))}
               </div>
               <p className="hero-text">
-                We build high-performance websites and custom apps turn small
-                businesses into local legends
+                We build high-performance websites and custom apps that turn
+                small businesses into local legends
               </p>
               <div className="hero-actions">
-                <a className="primary-button" href="#contact">Launch Your Project</a>
-                <a className="secondary-button" href="#proofs">View Our Work</a>
+                <a className="primary-button" href="#contact">
+                  Launch Your Project
+                </a>
+                <a className="secondary-button" href="#proofs">
+                  View Our Work
+                </a>
               </div>
-
             </div>
             <div className="hero-visual">
               <HeroGraphic />
@@ -432,7 +526,9 @@ export default function App() {
               <div className="timeline" aria-hidden="true">
                 <div className="timeline-line" />
                 {[1, 2, 3].map((n) => (
-                  <div key={n} className="timeline-point">{n}</div>
+                  <div key={n} className="timeline-point">
+                    {n}
+                  </div>
                 ))}
               </div>
               <div className="card-grid process-grid">
@@ -513,7 +609,9 @@ export default function App() {
           </section>
 
           <section className="section-block proof-section" id="proofs">
-            <p className="section-title">What We Do Proof: Our products and how we build</p>
+            <p className="section-title">
+              What We Do Proof: Our products and how we build
+            </p>
             <div className="card-grid proof-grid">
               {proofs.map((proof, i) => (
                 <Card
@@ -528,38 +626,131 @@ export default function App() {
           <section className="bottom-grid" id="contact">
             <div className="lead-form-panel">
               <p className="section-title">CONTACT US</p>
-              <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-                <label className="form-label" htmlFor="name">Name</label>
-                <input id="name" type="text" placeholder="Your full name" aria-label="Name" />
-
-                <label className="form-label" htmlFor="email">Email</label>
-                <input id="email" type="email" placeholder="your@email.com" aria-label="Email" />
-
-                <label className="form-label" htmlFor="project-type">Project Type</label>
-                <select id="project-type" aria-label="Project Type">
-                  <option value="">Select a project type</option>
-                  <option value="website">Website Development</option>
-                  <option value="mobile">Mobile App</option>
-                  <option value="uiux">UI/UX Design</option>
-                  <option value="software">Custom Software</option>
-                </select>
-
-                <label className="form-label" htmlFor="description">Short Project Description</label>
-                <textarea id="description" placeholder="Tell us about your project..." aria-label="Description" />
-
-                <button type="button" className="primary-button discovery-btn">
-                  Send Message
-                </button>
-
-                <a 
-                  href="https://calendly.com/siferhselamawit/discovery-call" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="calendly-link"
+              {formSubmitted ? (
+                <div
+                  style={{
+                    padding: "2rem",
+                    textAlign: "center",
+                    color: "var(--cyan)",
+                  }}
                 >
-                  Book a 15-minute Discovery Call
-                </a>
-              </form>
+                  <h3>Thank you!</h3>
+                  <p>Your message has been sent. We'll get back to you soon.</p>
+                </div>
+              ) : (
+                <form className="contact-form" onSubmit={handleSubmit}>
+                  <label className="form-label" htmlFor="name">
+                    Name
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="Your full name"
+                    aria-label="Name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                  />
+                  {formErrors.name && (
+                    <p
+                      style={{
+                        color: "#ff6b6b",
+                        fontSize: "0.85rem",
+                        margin: "0.25rem 0",
+                      }}
+                    >
+                      {formErrors.name}
+                    </p>
+                  )}
+
+                  <label className="form-label" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="your@email.com"
+                    aria-label="Email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                  />
+                  {formErrors.email && (
+                    <p
+                      style={{
+                        color: "#ff6b6b",
+                        fontSize: "0.85rem",
+                        margin: "0.25rem 0",
+                      }}
+                    >
+                      {formErrors.email}
+                    </p>
+                  )}
+
+                  <label className="form-label" htmlFor="project-type">
+                    Project Type
+                  </label>
+                  <select
+                    id="project-type"
+                    aria-label="Project Type"
+                    value={formData.projectType}
+                    onChange={handleInputChange}
+                  >
+                    <option value="">Select a project type</option>
+                    <option value="website">Website Development</option>
+                    <option value="mobile">Mobile App</option>
+                    <option value="uiux">UI/UX Design</option>
+                    <option value="software">Custom Software</option>
+                  </select>
+                  {formErrors.projectType && (
+                    <p
+                      style={{
+                        color: "#ff6b6b",
+                        fontSize: "0.85rem",
+                        margin: "0.25rem 0",
+                      }}
+                    >
+                      {formErrors.projectType}
+                    </p>
+                  )}
+
+                  <label className="form-label" htmlFor="description">
+                    Short Project Description
+                  </label>
+                  <textarea
+                    id="description"
+                    placeholder="Tell us about your project..."
+                    aria-label="Description"
+                    value={formData.description}
+                    onChange={handleInputChange}
+                  />
+                  {formErrors.description && (
+                    <p
+                      style={{
+                        color: "#ff6b6b",
+                        fontSize: "0.85rem",
+                        margin: "0.25rem 0",
+                      }}
+                    >
+                      {formErrors.description}
+                    </p>
+                  )}
+
+                  <button
+                    type="submit"
+                    className="primary-button discovery-btn"
+                  >
+                    Send Message
+                  </button>
+
+                  <a
+                    href="https://calendly.com/siferhselamawit/discovery-call"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="calendly-link"
+                  >
+                    Book a 15-minute Discovery Call
+                  </a>
+                </form>
+              )}
             </div>
           </section>
         </main>
@@ -575,19 +766,33 @@ export default function App() {
                   <div className="brand-copy">APEX DIGITAL SYSTEMS</div>
                 </div>
                 <p className="footer-text">
-                  Apex Digital Systems is a leading web development agency that builds high-performance websites and custom applications to turn small businesses into local legends.
+                  Apex Digital Systems is a leading web development agency that
+                  builds high-performance websites and custom applications to
+                  turn small businesses into local legends.
                 </p>
               </div>
 
               <div className="footer-section quick-links">
                 <h4 className="footer-title">Quick Links</h4>
                 <ul className="footer-links">
-                  <li><a href="#hero">Home</a></li>
-                  <li><a href="#about">About Us</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#portfolio">Portfolio</a></li>
-                  <li><a href="#testimonials">Testimonials</a></li>
-                  <li><a href="#contact">Contact Us</a></li>
+                  <li>
+                    <a href="#hero">Home</a>
+                  </li>
+                  <li>
+                    <a href="#about">About Us</a>
+                  </li>
+                  <li>
+                    <a href="#services">Services</a>
+                  </li>
+                  <li>
+                    <a href="#portfolio">Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="#testimonials">Testimonials</a>
+                  </li>
+                  <li>
+                    <a href="#contact">Contact Us</a>
+                  </li>
                 </ul>
               </div>
 
@@ -603,7 +808,9 @@ export default function App() {
                 </div>
                 <div className="footer-contact-item">
                   <span className="contact-icon">📍</span>
-                  <span>123 Tech Street, Suite 400, San Francisco, CA 94107</span>
+                  <span>
+                    123 Tech Street, Suite 400, San Francisco, CA 94107
+                  </span>
                 </div>
                 <div className="footer-contact-item">
                   <span className="contact-icon">⏰</span>
@@ -613,7 +820,9 @@ export default function App() {
             </div>
 
             <div className="footer-bottom">
-              <p className="copyright-notice">© 2026 Apex Digital Systems. All Rights Reserved.</p>
+              <p className="copyright-notice">
+                © 2026 Apex Digital Systems. All Rights Reserved.
+              </p>
             </div>
           </div>
         </footer>
